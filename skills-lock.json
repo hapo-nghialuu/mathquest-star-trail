@@ -1,0 +1,26 @@
+{
+  "package": "mathquest_source_of_truth_package",
+  "purpose": "Lock the intended creative and implementation capabilities for the first vertical MVP slice.",
+  "asset_status": "Polished ChatGPT-generated PNG assets have been renamed into assets/screens and assets/references.",
+  "skills": [
+    {
+      "name": "image-generation",
+      "role": "Generate future assets that match the approved reference sheets.",
+      "guidance": "Use json/mathquest_ai_agent_art_guideline.json and assets/references as the visual source of truth."
+    },
+    {
+      "name": "gsap",
+      "role": "Implement map, answer feedback, and reward timeline animations."
+    },
+    {
+      "name": "json-guidance",
+      "role": "Keep implementation data aligned with mathquest_mvp_implementation_config.json."
+    }
+  ],
+  "constraints": [
+    "Stay aligned with the polished art design in assets/references.",
+    "Do not use the older placeholder SVG assets.",
+    "Do not use screenshots or video frames as production assets.",
+    "Keep lesson text readable and child-friendly."
+  ]
+}
