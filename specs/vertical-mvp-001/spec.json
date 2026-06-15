@@ -186,7 +186,7 @@
     "design": "done",
     "tasks": "done",
     "code": "done",
-    "test": "pending",
+    "test": "done",
     "review": "pending"
   },
   "timestamps": {
@@ -195,8 +195,8 @@
     "research_done": "2026-06-15T16:30:00+07:00",
     "design_done": "2026-06-15T16:30:00+07:00",
     "tasks_done": "2026-06-15T16:30:00+07:00",
-    "code_done": null,
-    "test_done": null,
+    "code_done": "2026-06-15T17:45:00+07:00",
+    "test_done": "2026-06-15T18:00:00+07:00",
     "review_done": "2026-06-15T17:10:00+07:00",
     "validation_done": "2026-06-15T17:10:00+07:00"
   },
