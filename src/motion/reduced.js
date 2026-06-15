@@ -11,6 +11,10 @@ export function isReducedMotion() {
 }
 
 export function setRootDataAttribute(rootEl) {
-  if (!rootEl) return;
-  rootEl.setAttribute('data-reduced-motion', String(isReducedMotion()));
+  const value = String(isReducedMotion());
+  if (rootEl) rootEl.setAttribute('data-reduced-motion', value);
+  // Mirror to <html> so global CSS / portals / body-level styles can react.
+  if (typeof document !== 'undefined' && document.documentElement) {
+    document.documentElement.setAttribute('data-reduced-motion', value);
+  }
 }

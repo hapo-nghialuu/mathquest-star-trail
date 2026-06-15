@@ -1,5 +1,6 @@
 // screens/map.js — Adventure Map screen.
 
+import { gsap } from 'gsap';
 import mapBg from '../../assets/screens/01_adventure_map_screen.png';
 import bottomNav from '../../assets/screen_crops/bottom_nav_quests_practice_shop.png';
 import currentNode26 from '../../assets/screen_crops/map_node_current_26.png';
@@ -12,6 +13,7 @@ import { EVENTS } from '../state/machine.js';
 
 export function render(rootEl, state, dispatch) {
   const pulseTimelines = [];
+  let node26Tapped = false; // double-tap guard (code review 2026-06-15)
 
   // Background.
   const bg = h('img', {
@@ -114,17 +116,15 @@ export function render(rootEl, state, dispatch) {
 
 function handleNodeTap(dispatch, id, nodeEl) {
   if (id !== 26) return;
+  if (node26Tapped) return;
+  node26Tapped = true;
   // Tap scale-up animation, then dispatch the event.
-  import('gsap').then(({ gsap }) => {
-    if (nodeEl) {
-      gsap.fromTo(
-        nodeEl,
-        { scale: 1.0 },
-        { scale: 1.15, duration: 0.15, yoyo: true, repeat: 1, ease: 'power1.out' }
-      );
-    }
-    dispatch(EVENTS.NODE_26_SELECTED);
-  }).catch(() => {
-    dispatch(EVENTS.NODE_26_SELECTED);
-  });
+  if (nodeEl) {
+    gsap.fromTo(
+      nodeEl,
+      { scale: 1.0 },
+      { scale: 1.15, duration: 0.15, yoyo: true, repeat: 1, ease: 'power1.out' }
+    );
+  }
+  dispatch(EVENTS.NODE_26_SELECTED);
 }

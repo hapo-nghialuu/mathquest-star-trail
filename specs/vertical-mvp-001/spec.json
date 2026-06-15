@@ -1,9 +1,9 @@
 {
   "feature_name": "vertical-mvp-001",
   "created_at": "2026-06-15T16:30:00+07:00",
-  "updated_at": "2026-06-15T17:10:00+07:00",
+  "updated_at": "2026-06-15T18:35:00+07:00",
   "language": "en",
-  "status": "in_progress",
+  "status": "done",
   "phase": "tasks",
   "current_phase": "tasks",
   "priority": "P2",
@@ -70,97 +70,97 @@
     "tasks/task-R0-01-scaffold-and-persistence.md": {
       "id": "R0-01",
       "title": "Scaffold app shell and persistence layer",
-      "status": "in_progress",
+      "status": "done",
       "dependencies": [],
       "blocker": null,
       "started_at": "2026-06-15T17:30:00+07:00",
-      "completed_at": null,
-      "last_updated_at": "2026-06-15T17:30:00+07:00"
+      "completed_at": "2026-06-15T17:45:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R1-01-map-layout-and-counters.md": {
       "id": "R1-01",
       "title": "Adventure Map layout and top counter pills",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R0-01-scaffold-and-persistence.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T17:45:00+07:00",
+      "completed_at": "2026-06-15T17:50:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R1-02-map-nodes-and-pulse.md": {
       "id": "R1-02",
       "title": "Adventure Map nodes, bottom nav, and node 26 pulse animation",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R1-01-map-layout-and-counters.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T17:50:00+07:00",
+      "completed_at": "2026-06-15T17:55:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R2-01-lesson-frame.md": {
       "id": "R2-01",
       "title": "Lesson screen frame, progress bar, and hearts indicator",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R0-01-scaffold-and-persistence.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T17:55:00+07:00",
+      "completed_at": "2026-06-15T18:00:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R2-02-lesson-question-and-answers.md": {
       "id": "R2-02",
       "title": "Lesson question card, four answer tiles, and correct/incorrect feedback",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R2-01-lesson-frame.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T18:00:00+07:00",
+      "completed_at": "2026-06-15T18:05:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R2-03-hint-help-read-controls.md": {
       "id": "R2-03",
       "title": "Hint, Help, and Read support controls on lesson screen",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R2-02-lesson-question-and-answers.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T18:05:00+07:00",
+      "completed_at": "2026-06-15T18:10:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R3-01-reward-render-and-anim.md": {
       "id": "R3-01",
       "title": "Reward screen render with banner drop, star pop, and XP count-up",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R2-02-lesson-question-and-answers.md", "tasks/task-R2-03-hint-help-read-controls.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T18:10:00+07:00",
+      "completed_at": "2026-06-15T18:15:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R4-01-scoring-and-persistence.md": {
       "id": "R4-01",
       "title": "Scoring computation and localStorage persistence on save_progress",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R2-02-lesson-question-and-answers.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T18:15:00+07:00",
+      "completed_at": "2026-06-15T18:20:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R4-02-return-to-map-and-unlock.md": {
       "id": "R4-02",
       "title": "Return to map, node 27 unlock, and updated counter re-render",
-      "status": "pending",
+      "status": "done",
       "dependencies": ["tasks/task-R3-01-reward-render-and-anim.md", "tasks/task-R4-01-scoring-and-persistence.md"],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T18:20:00+07:00",
+      "completed_at": "2026-06-15T18:25:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     },
     "tasks/task-R4-03-walkthrough-verification.md": {
       "id": "R4-03",
       "title": "End-to-end walkthrough verification across all scoring paths and reduced motion",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         "tasks/task-R0-01-scaffold-and-persistence.md",
         "tasks/task-R1-01-map-layout-and-counters.md",
@@ -173,9 +173,9 @@
         "tasks/task-R4-02-return-to-map-and-unlock.md"
       ],
       "blocker": null,
-      "started_at": null,
-      "completed_at": null,
-      "last_updated_at": null
+      "started_at": "2026-06-15T18:25:00+07:00",
+      "completed_at": "2026-06-15T18:30:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
     }
   },
   "blocker": null,
@@ -187,7 +187,7 @@
     "tasks": "done",
     "code": "done",
     "test": "done",
-    "review": "pending"
+    "review": "done"
   },
   "timestamps": {
     "init": "2026-06-15T16:30:00+07:00",

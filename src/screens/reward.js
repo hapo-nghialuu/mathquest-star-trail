@@ -15,8 +15,9 @@ export function render(rootEl, state, dispatch, payload) {
   if (!payload) {
     console.warn('[reward] missing payload; using DEFAULT_REWARD');
   }
-  const targetScore = Number(reward.score) || 0;
+  const targetXp = 60; // The completion XP bonus is always 60 (R8.6, R7.4).
   const awardedStars = Math.max(0, Math.min(3, Number(reward.stars) || 0));
+  const awardedScore = Math.max(0, Number(reward.score) || 0);
 
   const bg = h('img', { className: 'bg', src: rewardBg, alt: 'Reward background with bridge restored' });
 
@@ -40,7 +41,7 @@ export function render(rootEl, state, dispatch, payload) {
   });
   const xpText = h('div', {
     className: 'reward-xp-text',
-    'aria-label': `Score ${targetScore}`,
+    'aria-label': `Plus ${targetXp} XP, ${awardedScore} score`,
     text: '0',
   });
 
@@ -82,7 +83,7 @@ export function render(rootEl, state, dispatch, payload) {
       bannerEl: banner,
       starEls: Array.from(starsRow.querySelectorAll('span')),
       xpEl: xpText,
-      targetXp: targetScore,
+      targetXp: targetXp,
     });
     timeline.play();
   });

@@ -72,10 +72,12 @@ export function save(state) {
 
 export function mergeLessonResult(state, { score, stars, xpBonus, wrongCount } = {}) {
   // Pure: never reads localStorage. Caller passes the current state explicitly.
-  const safeScore = Math.max(0, Number(score) || 0);
-  const safeStars = Math.max(0, Number(stars) || 0);
-  const safeXpBonus = Math.max(0, Number(xpBonus) || 0);
-  const safeWrong = Math.max(0, Number(wrongCount) || 0);
+  // Clamp inputs to finite non-negative integers to prevent Infinity/NaN/negative
+  // values from corrupting the persisted snapshot (code review 2026-06-15 finding 6).
+  const safeScore = clampInt(score, 0, 1000);
+  const safeStars = clampInt(stars, 0, 3);
+  const safeXpBonus = clampInt(xpBonus, 0, 10000);
+  const safeWrong = clampInt(wrongCount, 0, 100);
 
   // Deep clone the nodes array so we never mutate the input.
   const nodes = state.nodes.map((n) => ({ ...n }));
@@ -126,4 +128,16 @@ export function mergeLessonResult(state, { score, stars, xpBonus, wrongCount } =
 
 function cloneDefault() {
   return JSON.parse(JSON.stringify(DEFAULT_STATE));
+}
+
+function clampInt(value, min, max) {
+  const n = Number(value);
+  // Number.isFinite rejects Infinity/-Infinity/NaN. For non-finite values
+  // we treat the input as a non-event and fall back to the minimum (safe
+  // default — refuse to add or change anything on garbage input).
+  if (!Number.isFinite(n)) return min;
+  const i = Math.trunc(n);
+  if (i < min) return min;
+  if (i > max) return max;
+  return i;
 }

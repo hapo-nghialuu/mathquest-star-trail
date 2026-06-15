@@ -1,6 +1,9 @@
 // pulse.js — node 26 pulse timeline factory.
 // Red Team 2026-06-15: kill() re-applies the green ring for completed nodes
 // (so the visual cue survives the timeline teardown).
+// Code review 2026-06-15: if the GSAP import fails (CDN offline, CSP block),
+// the early `isReducedMotion` branch already returns a no-op shim, so the
+// game degrades to static visuals instead of crashing.
 
 import { gsap } from 'gsap';
 import { isReducedMotion } from './reduced.js';

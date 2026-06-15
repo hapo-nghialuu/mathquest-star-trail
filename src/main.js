@@ -75,24 +75,30 @@ export function dispatch(event, payload) {
     } else {
       console.warn('[main] save failed:', result.persisted.error);
     }
-    mountScreen('return_to_map');
+    // Transition through SAVE_PROGRESS then dispatch DONE so the state
+    // machine table actually executes (code review 2026-06-15 finding 5).
+    appState.currentStateName = STATES.SAVE_PROGRESS;
+    dispatch(EVENTS.DONE);
   } else if (event === EVENTS.BACK_TO_MAP) {
     // State was already saved on CONTINUE. Just remount the map.
+    appState.currentStateName = STATES.RETURN_TO_MAP;
     mountScreen('return_to_map');
   } else if (event === EVENTS.CLOSE) {
     // Lesson closed without answering — no save, no reward.
+    appState.currentStateName = STATES.RETURN_TO_MAP;
     mountScreen('return_to_map');
   } else if (event === EVENTS.NODE_26_SELECTED) {
+    appState.currentStateName = STATES.LESSON_QUESTION;
     mountScreen('lesson_question');
   } else if (event === EVENTS.INCORRECT) {
     // Lesson screen handles its own visual feedback; stay mounted.
+    appState.currentStateName = STATES.LESSON_QUESTION;
   } else if (event === EVENTS.DONE) {
-    if (nextStateName === STATES.ADVENTURE_MAP) {
-      mountScreen('adventure_map');
-    } else {
-      mountScreen('return_to_map');
-    }
+    // save_progress -> return_to_map -> adventure_map
+    appState.currentStateName = STATES.RETURN_TO_MAP;
+    mountScreen('return_to_map');
   } else if (event === EVENTS.INIT) {
+    appState.currentStateName = STATES.ADVENTURE_MAP;
     mountScreen('adventure_map');
   }
 }
@@ -108,9 +114,4 @@ if (document.readyState === 'loading') {
   window.addEventListener('DOMContentLoaded', boot);
 } else {
   boot();
-}
-
-// Expose for debugging in DevTools. Harmless in production.
-if (typeof window !== 'undefined') {
-  window.__MQ__ = { appState, mountScreen, dispatch };
 }
