@@ -1,0 +1,25 @@
+/* MathQuest: Star Trail — Design Tokens
+ * Source: assets/references/01_color_palette_reference.png
+ */
+:root {
+  /* Palette */
+  --c-sky: #7ec8ff;
+  --c-navy: #0a1f5c;
+  --c-success: #3ec47a;
+  --c-gold: #ffd84a;
+  --c-purple: #9b6cff;
+  --c-fox: #ff7a3d;
+  --c-red: #ff5c6b;
+  --c-bg: #0e1545;
+  --c-text: #0a1f5c;
+  --c-text-onDark: #ffffff;
+
+  /* Radii */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+
+  /* Shadows */
+  --shadow-card: 0 8px 24px rgba(10, 31, 92, 0.18);
+  --shadow-soft: 0 4px 12px rgba(10, 31, 92, 0.12);
+}
