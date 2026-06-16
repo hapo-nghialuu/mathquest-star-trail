@@ -7,3 +7,6 @@ plans/
 .cafekit-backup/
 .cafekit.lock
 .claude/
+
+# OS Trash file
+.DS_Store
