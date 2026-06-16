@@ -10,3 +10,9 @@ plans/
 
 # OS Trash file
 .DS_Store
+
+# Node / Vite
+node_modules/
+dist/
+.vite/
+*.log

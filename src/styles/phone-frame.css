@@ -1,0 +1,35 @@
+/* Phone frame — the 375x812 mobile viewport is centered on desktop with a
+ * bezel and drop shadow. Scales down for narrower desktop windows. */
+
+.phone-stage {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  background: var(--c-navy);
+  border-radius: 44px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 12px #0c1431,
+    0 0 0 14px #2a3576,
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    0 0 80px rgba(78, 195, 245, 0.15);
+}
+
+@media (max-width: 480px), (max-height: 860px) {
+  .phone-stage {
+    transform: scale(var(--phone-scale, 1));
+    transform-origin: center center;
+  }
+}
+
+.phone-screen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.phone-screen > * {
+  position: absolute;
+  inset: 0;
+}
