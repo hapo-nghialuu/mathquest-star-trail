@@ -1,0 +1,24 @@
+/* MathQuest: Star Trail — reduced-motion CSS safety net.
+ * The JS is the source of truth (see motion/reduced.js), but these rules
+ * make sure any CSS-driven transitions stay consistent. The attribute is
+ * mirrored on both <html> and #app so global selectors and portal content
+ * can react.
+ */
+
+[data-reduced-motion="true"] *,
+[data-reduced-motion="true"] *::before,
+[data-reduced-motion="true"] *::after,
+html[data-reduced-motion="true"] *,
+html[data-reduced-motion="true"] *::before,
+html[data-reduced-motion="true"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 200ms !important;
+}
+
+[data-reduced-motion="true"] .pulse-node,
+html[data-reduced-motion="true"] .pulse-node {
+  animation: none !important;
+  border: 2px solid var(--c-gold) !important;
+  box-shadow: none !important;
+}

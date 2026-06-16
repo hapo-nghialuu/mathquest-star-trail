@@ -1,0 +1,223 @@
+{
+  "feature_name": "vertical-mvp-001",
+  "created_at": "2026-06-15T16:30:00+07:00",
+  "updated_at": "2026-06-15T18:35:00+07:00",
+  "language": "en",
+  "status": "done",
+  "phase": "tasks",
+  "current_phase": "tasks",
+  "priority": "P2",
+  "effort": "M",
+  "tags": ["mvp-slice", "vertical-slice", "game", "gsap", "k12-math"],
+  "approvals": {
+    "requirements": { "generated": true, "approved": true },
+    "design": { "generated": true, "approved": true },
+    "tasks": { "generated": true, "approved": true }
+  },
+  "scope_lock": {
+    "source": "Polish the first vertical MVP slice (map -> lesson -> reward loop) for MathQuest: Star Trail. Use existing polished art assets and the JSON guidance. Use GSAP for animation. Persist progress to localStorage. No new image generation, no auth, no backend, no Shop/Quests/Practice screen content (nav items are visual placeholders only).",
+    "in_scope": [
+      "Adventure Map screen rendering 7 nodes (21-27) with active node 26 highlighted and pulsing",
+      "Top counter pills: level 12, stars 152, streak 7",
+      "World banner 'Star Trail' on map",
+      "Bottom nav: Quests, Practice, Shop (visual placeholders, no routing)",
+      "Lesson screen: place value question 'Which number is 400 + 30 + 6?' with 4 answer tiles (436 correct)",
+      "Lesson progress bar 4/10 and hearts indicator (2 filled + 1 empty)",
+      "Hint, Help, Read controls (visual-only Read)",
+      "Reward screen: 'Bridge Repaired!' banner, 3 glowing stars, +60 XP badge, Continue Adventure CTA",
+      "State machine with 9 states: boot -> adventure_map -> node_26_selected -> lesson_question -> answer_selected -> feedback -> reward_completion -> save_progress -> return_to_map",
+      "Scoring tiers: first-try 10pts+3 stars, after-hint 7pts+2, after-1-wrong 5pts+2, after-multi-wrong 3pts+1; +60 XP completion bonus",
+      "Streak +1 when lesson ends with <=1 wrong answer",
+      "Node 27 unlock on node 26 completion",
+      "localStorage persistence (versioned schema v1)",
+      "GSAP timelines for map pulse, node tap, correct/incorrect feedback, reward enter (banner drop, stars pop, XP count-up)",
+      "prefers-reduced-motion fallback: opacity-only transitions, static gold border on node 26, instant XP value"
+    ],
+    "out_of_scope": [
+      "Audio / Text-to-Speech (visual-only Read per source-of-truth)",
+      "Multi-question lesson sessions (config ships 1 question; 4/10 progress is visual prop)",
+      "Backend, authentication, account sync, cloud save",
+      "Shop / Quests / Practice screen content or routing (visual nav strip only)",
+      "i18n, settings screen, account management",
+      "Automated test framework (manual walkthrough is the verification surface for this slice)",
+      "TypeScript build, Vite, Tailwind, PostCSS",
+      "Reset-progress UI",
+      "PWA / service worker / install prompt",
+      "Lottie or spine-based fox animations",
+      "Multiple worlds navigation (Number Meadow / Fraction Lagoon / Shape Castle — visual labels only)",
+      "Lesson retry / practice mode",
+      "Telemetry, analytics, error monitoring"
+    ],
+    "expansion_policy": "requires-user-approval"
+  },
+  "dependencies": {
+    "blockedBy": [],
+    "blocks": []
+  },
+  "task_files": [
+    "tasks/task-R0-01-scaffold-and-persistence.md",
+    "tasks/task-R1-01-map-layout-and-counters.md",
+    "tasks/task-R1-02-map-nodes-and-pulse.md",
+    "tasks/task-R2-01-lesson-frame.md",
+    "tasks/task-R2-02-lesson-question-and-answers.md",
+    "tasks/task-R2-03-hint-help-read-controls.md",
+    "tasks/task-R3-01-reward-render-and-anim.md",
+    "tasks/task-R4-01-scoring-and-persistence.md",
+    "tasks/task-R4-02-return-to-map-and-unlock.md",
+    "tasks/task-R4-03-walkthrough-verification.md"
+  ],
+  "task_registry": {
+    "tasks/task-R0-01-scaffold-and-persistence.md": {
+      "id": "R0-01",
+      "title": "Scaffold app shell and persistence layer",
+      "status": "done",
+      "dependencies": [],
+      "blocker": null,
+      "started_at": "2026-06-15T17:30:00+07:00",
+      "completed_at": "2026-06-15T17:45:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R1-01-map-layout-and-counters.md": {
+      "id": "R1-01",
+      "title": "Adventure Map layout and top counter pills",
+      "status": "done",
+      "dependencies": ["tasks/task-R0-01-scaffold-and-persistence.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T17:45:00+07:00",
+      "completed_at": "2026-06-15T17:50:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R1-02-map-nodes-and-pulse.md": {
+      "id": "R1-02",
+      "title": "Adventure Map nodes, bottom nav, and node 26 pulse animation",
+      "status": "done",
+      "dependencies": ["tasks/task-R1-01-map-layout-and-counters.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T17:50:00+07:00",
+      "completed_at": "2026-06-15T17:55:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R2-01-lesson-frame.md": {
+      "id": "R2-01",
+      "title": "Lesson screen frame, progress bar, and hearts indicator",
+      "status": "done",
+      "dependencies": ["tasks/task-R0-01-scaffold-and-persistence.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T17:55:00+07:00",
+      "completed_at": "2026-06-15T18:00:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R2-02-lesson-question-and-answers.md": {
+      "id": "R2-02",
+      "title": "Lesson question card, four answer tiles, and correct/incorrect feedback",
+      "status": "done",
+      "dependencies": ["tasks/task-R2-01-lesson-frame.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T18:00:00+07:00",
+      "completed_at": "2026-06-15T18:05:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R2-03-hint-help-read-controls.md": {
+      "id": "R2-03",
+      "title": "Hint, Help, and Read support controls on lesson screen",
+      "status": "done",
+      "dependencies": ["tasks/task-R2-02-lesson-question-and-answers.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T18:05:00+07:00",
+      "completed_at": "2026-06-15T18:10:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R3-01-reward-render-and-anim.md": {
+      "id": "R3-01",
+      "title": "Reward screen render with banner drop, star pop, and XP count-up",
+      "status": "done",
+      "dependencies": ["tasks/task-R2-02-lesson-question-and-answers.md", "tasks/task-R2-03-hint-help-read-controls.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T18:10:00+07:00",
+      "completed_at": "2026-06-15T18:15:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R4-01-scoring-and-persistence.md": {
+      "id": "R4-01",
+      "title": "Scoring computation and localStorage persistence on save_progress",
+      "status": "done",
+      "dependencies": ["tasks/task-R2-02-lesson-question-and-answers.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T18:15:00+07:00",
+      "completed_at": "2026-06-15T18:20:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R4-02-return-to-map-and-unlock.md": {
+      "id": "R4-02",
+      "title": "Return to map, node 27 unlock, and updated counter re-render",
+      "status": "done",
+      "dependencies": ["tasks/task-R3-01-reward-render-and-anim.md", "tasks/task-R4-01-scoring-and-persistence.md"],
+      "blocker": null,
+      "started_at": "2026-06-15T18:20:00+07:00",
+      "completed_at": "2026-06-15T18:25:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    },
+    "tasks/task-R4-03-walkthrough-verification.md": {
+      "id": "R4-03",
+      "title": "End-to-end walkthrough verification across all scoring paths and reduced motion",
+      "status": "done",
+      "dependencies": [
+        "tasks/task-R0-01-scaffold-and-persistence.md",
+        "tasks/task-R1-01-map-layout-and-counters.md",
+        "tasks/task-R1-02-map-nodes-and-pulse.md",
+        "tasks/task-R2-01-lesson-frame.md",
+        "tasks/task-R2-02-lesson-question-and-answers.md",
+        "tasks/task-R2-03-hint-help-read-controls.md",
+        "tasks/task-R3-01-reward-render-and-anim.md",
+        "tasks/task-R4-01-scoring-and-persistence.md",
+        "tasks/task-R4-02-return-to-map-and-unlock.md"
+      ],
+      "blocker": null,
+      "started_at": "2026-06-15T18:25:00+07:00",
+      "completed_at": "2026-06-15T18:30:00+07:00",
+      "last_updated_at": "2026-06-15T18:30:00+07:00"
+    }
+  },
+  "blocker": null,
+  "progress": {
+    "init": "done",
+    "requirements": "done",
+    "research": "done",
+    "design": "done",
+    "tasks": "done",
+    "code": "done",
+    "test": "done",
+    "review": "done"
+  },
+  "timestamps": {
+    "init": "2026-06-15T16:30:00+07:00",
+    "requirements_done": "2026-06-15T16:30:00+07:00",
+    "research_done": "2026-06-15T16:30:00+07:00",
+    "design_done": "2026-06-15T16:30:00+07:00",
+    "tasks_done": "2026-06-15T16:30:00+07:00",
+    "code_done": "2026-06-15T17:45:00+07:00",
+    "test_done": "2026-06-15T18:00:00+07:00",
+    "review_done": "2026-06-15T17:10:00+07:00",
+    "validation_done": "2026-06-15T17:10:00+07:00"
+  },
+  "design_context": {
+    "discovery_mode": "light",
+    "discovery_reason": "Greenfield build with full polished art package already present; no integration with external systems; no auth or migration concerns. Light discovery is sufficient to map assets to UI surfaces and define localStorage schema.",
+    "validation_recommended": true
+  },
+  "validation": {
+    "status": "completed",
+    "session_count": 1,
+    "questions_asked": 3,
+    "last_validated_at": "2026-06-15T17:10:00+07:00"
+  },
+  "translation": {
+    "enabled": false,
+    "language": null,
+    "language_code": null,
+    "dir": null,
+    "sync": "always",
+    "last_synced_at": null
+  },
+  "ready_for_implementation": true
+}
