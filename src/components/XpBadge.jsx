@@ -7,8 +7,8 @@ import { assets } from '../data/assets.js';
 const styles = {
   wrap: {
     position: 'relative',
-    width: 160,
-    height: 160,
+    width: 150,
+    height: 150,
   },
   img: {
     width: '100%',

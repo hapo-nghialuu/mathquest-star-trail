@@ -124,15 +124,18 @@ const styles = {
   control: {
     flex: 1,
     maxWidth: 110,
+    appearance: 'none',
+    WebkitAppearance: 'none',
+    MozAppearance: 'none',
     background: 'linear-gradient(180deg, var(--c-sky-blue) 0%, var(--c-sky-blue-dark) 100%)',
     color: 'var(--c-white)',
-    border: '2px solid var(--c-navy)',
+    border: '3px solid var(--c-navy)',
     borderRadius: 'var(--radius-pill)',
     padding: '10px 14px',
     fontSize: 14,
     fontWeight: 900,
     boxShadow: 'var(--shadow-button)',
-    textShadow: '0 1px 0 rgba(20, 30, 70, 0.4)',
+    textShadow: '0 1px 0 rgba(20, 30, 70, 0.5)',
   },
   // Hint popup
   hint: {
@@ -186,9 +189,12 @@ export default function LessonQuestion({ state, dispatch }) {
     <>
       <img src={assets.lessonSkyBackground} alt="" style={styles.bg} draggable={false} />
 
-      {/* Decorative clouds */}
-      <WorldPiece src={assets.cloudPuffSoft} alt="" left="-8%" top="0%" width="40%" zIndex={1} opacity={0.85} />
-      <WorldPiece src={assets.cloudPuffLarge} alt="" left="64%" top="4%" width="38%" zIndex={1} opacity={0.9} />
+      {/* Decorative clouds + portal backdrop so the sky reads as a
+          magical world (matches the reference). */}
+      <WorldPiece src={assets.cloudPuffSoft} alt="" left="-10%" top="-2%" width="42%" zIndex={1} opacity={0.9} />
+      <WorldPiece src={assets.cloudPuffLarge} alt="" left="60%" top="2%" width="42%" zIndex={1} opacity={0.9} />
+      <WorldPiece src={assets.magicPortalBlue} alt="" left="-8%" top="48%" width="40%" zIndex={1} opacity={0.85} />
+      <WorldPiece src={assets.magicPortalBlue} alt="" right="-8%" top="58%" width="40%" zIndex={1} opacity={0.85} />
 
       {/* Top bar */}
       <div style={styles.topBar}>
@@ -236,7 +242,8 @@ export default function LessonQuestion({ state, dispatch }) {
         ))}
       </div>
 
-      {/* Mascot — happy when correct, worried when wrong, thinking otherwise */}
+      {/* Mascot — happy when correct, worried when wrong, thinking otherwise.
+          Anchored bottom-left so it never overlaps the 2x2 answer grid. */}
       <Mascot
         pose={
           lesson.feedback === 'correct'
@@ -245,9 +252,9 @@ export default function LessonQuestion({ state, dispatch }) {
               ? 'worried'
               : 'thinking'
         }
-        left="64%"
-        top="55%"
-        width={120}
+        left="6%"
+        top="64%"
+        width={130}
       />
 
       {/* Bottom controls */}

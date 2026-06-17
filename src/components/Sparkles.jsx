@@ -11,6 +11,9 @@ const PRESETS = {
     { left: '50%', top: '55%', size: 100, rotate: -5, delay: 0.08 },
     { left: '12%', top: '60%', size: 60, rotate: 25, delay: 0.25 },
     { left: '70%', top: '70%', size: 80, rotate: -20, delay: 0.14 },
+    { left: '8%', top: '14%', size: 50, rotate: -15, delay: 0.32 },
+    { left: '90%', top: '8%', size: 60, rotate: 22, delay: 0.38 },
+    { left: '85%', top: '40%', size: 55, rotate: -8, delay: 0.44 },
   ],
 };
 

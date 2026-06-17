@@ -163,5 +163,54 @@
     "Reward grants +60 XP and three stars.",
     "Progress updates so node 27 can become available.",
     "Hint, Help, and Read controls are present and accessible."
-  ]
+  ],
+  "item_assets": {
+    "canonical_folder": "assets/items/",
+    "backgrounds": {
+      "map_day_path": "assets/items/day_path_background.png",
+      "lesson_sky": "assets/items/lesson_sky_background.png",
+      "reward_night": "assets/items/reward_night_background.png"
+    },
+    "map": {
+      "floating_island_meadow": "assets/items/floating_island_meadow.png",
+      "floating_island_waterfall": "assets/items/floating_island_waterfall.png",
+      "bridge_path_segment": "assets/items/bridge_path_segment.png",
+      "node_available": "assets/items/map_node_blank_blue.png",
+      "node_completed": "assets/items/map_node_completed_3stars.png",
+      "node_locked": "assets/items/map_node_locked.png",
+      "cloud_large": "assets/items/cloud_puff_large.png",
+      "cloud_soft": "assets/items/cloud_puff_soft.png"
+    },
+    "lesson": {
+      "answer_card_orange": "assets/items/answer_card_orange.png",
+      "mascot_thinking": "assets/items/fox_mascot_thinking.png",
+      "mascot_pointing": "assets/items/fox_mascot_pointing.png",
+      "mascot_worried": "assets/items/fox_mascot_worried.png",
+      "magic_portal": "assets/items/magic_portal_blue.png"
+    },
+    "reward": {
+      "mascot_jumping": "assets/items/fox_mascot_jumping.png",
+      "ribbon_banner_gold": "assets/items/ribbon_banner_gold.png",
+      "star_filled_gold": "assets/items/star_filled_gold.png",
+      "star_outline_empty": "assets/items/star_outline_empty.png",
+      "sparkle_particle": "assets/items/sparkle_particle.png",
+      "xp_badge_60": "assets/items/xp_badge_60.png"
+    },
+    "navigation": {
+      "bottom_nav_strip": "assets/items/bottom_nav_strip.png",
+      "quests": "assets/items/nav_icon_quests.png",
+      "practice": "assets/items/nav_icon_practice.png",
+      "shop": "assets/items/nav_icon_shop.png"
+    }
+  },
+  "asset_processing": {
+    "items_have_alpha": true,
+    "background_removed_count": 23,
+    "opaque_background_assets": [
+      "day_path_background",
+      "lesson_sky_background",
+      "reward_night_background"
+    ],
+    "original_backup": "archive/items_original_before_bg_removal_2026-06-16/"
+  }
 }

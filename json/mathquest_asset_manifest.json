@@ -1,6 +1,11 @@
 {
   "package": "mathquest_source_of_truth_package",
-  "asset_policy": "Use the renamed polished PNG assets as the current approved source references. Old placeholder SVG/PNG assets were removed.",
+  "asset_policy": "Use assets/items as the canonical 26-image component pack. Screens and references remain high-level visual references.",
+  "asset_roots": {
+    "screens": "assets/screens",
+    "references": "assets/references",
+    "items": "assets/items"
+  },
   "screens": [
     {
       "id": "concept_sheet",
@@ -64,42 +69,588 @@
       "purpose": "Map regions, world elements, node examples, and art direction notes."
     }
   ],
-  "screen_crops": [
+  "items": [
     {
-      "id": "map_node_current_26",
-      "path": "assets/screen_crops/map_node_current_26.png",
-      "source": "assets/screens/01_adventure_map_screen.png",
-      "purpose": "Current active node styling."
+      "number": 1,
+      "id": "answer_card_orange",
+      "filename": "answer_card_orange.png",
+      "path": "assets/items/answer_card_orange.png",
+      "dimensions": "1448x1086",
+      "category": "ui_card",
+      "description": "Cream answer-card panel with a glossy orange border and rounded rectangle shape.",
+      "purpose": "Reusable answer choice card or lightweight content panel.",
+      "recommended_usage": "Use as a neutral/secondary answer tile state, especially for orange option styling.",
+      "alt_text": "Rounded cream answer card with orange border",
+      "tags": [
+        "answer",
+        "card",
+        "orange",
+        "rounded",
+        "ui"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
     },
     {
-      "id": "bottom_nav_quests_practice_shop",
-      "path": "assets/screen_crops/bottom_nav_quests_practice_shop.png",
-      "source": "assets/screens/01_adventure_map_screen.png",
-      "purpose": "Bottom navigation reference."
+      "number": 2,
+      "id": "bottom_nav_strip",
+      "filename": "bottom_nav_strip.png",
+      "path": "assets/items/bottom_nav_strip.png",
+      "dimensions": "2172x724",
+      "category": "navigation",
+      "description": "Glossy blue-and-white bottom navigation strip with three empty circular icon slots and star accents.",
+      "purpose": "Base navigation bar background for Quests, Practice, and Shop.",
+      "recommended_usage": "Layer nav icons or labels over the three circular slots.",
+      "alt_text": "Blue bottom navigation strip with three icon slots",
+      "tags": [
+        "bottom-nav",
+        "navigation",
+        "ui",
+        "strip",
+        "stars"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
     },
     {
-      "id": "lesson_answer_card",
-      "path": "assets/screen_crops/lesson_answer_card.png",
-      "source": "assets/screens/02_lesson_question_screen.png",
-      "purpose": "Question card and answer tile reference."
+      "number": 3,
+      "id": "bridge_path_segment",
+      "filename": "bridge_path_segment.png",
+      "path": "assets/items/bridge_path_segment.png",
+      "dimensions": "1448x1086",
+      "category": "world_piece",
+      "description": "Wooden bridge connected to a curved dirt path with stones, grass, and flowers.",
+      "purpose": "Map path segment and level transition visual.",
+      "recommended_usage": "Use around map node 26 or any repaired-bridge progression moment.",
+      "alt_text": "Wooden bridge leading into a grassy path",
+      "tags": [
+        "bridge",
+        "path",
+        "map",
+        "world",
+        "transition"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
     },
     {
-      "id": "fox_mascot_cheer",
-      "path": "assets/screen_crops/fox_mascot_cheer.png",
-      "source": "assets/screens/02_lesson_question_screen.png",
-      "purpose": "In-lesson mascot support pose."
+      "number": 4,
+      "id": "cloud_puff_large",
+      "filename": "cloud_puff_large.png",
+      "path": "assets/items/cloud_puff_large.png",
+      "dimensions": "1448x1086",
+      "category": "environment_decoration",
+      "description": "Large soft pastel cloud cluster with warm highlights and pale blue shadows.",
+      "purpose": "Sky decoration for map and lesson backgrounds.",
+      "recommended_usage": "Use as a large background cloud behind floating islands or UI panels.",
+      "alt_text": "Large soft white cloud",
+      "tags": [
+        "cloud",
+        "sky",
+        "background",
+        "decoration"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
     },
     {
-      "id": "reward_stars_banner",
-      "path": "assets/screen_crops/reward_stars_banner.png",
-      "source": "assets/screens/03_reward_completion_screen.png",
-      "purpose": "Reward banner and three-star celebration reference."
+      "number": 5,
+      "id": "cloud_puff_soft",
+      "filename": "cloud_puff_soft.png",
+      "path": "assets/items/cloud_puff_soft.png",
+      "dimensions": "1448x1086",
+      "category": "environment_decoration",
+      "description": "Wide fluffy cloud group with layered soft white and lavender-blue shading.",
+      "purpose": "Secondary sky decoration and atmospheric filler.",
+      "recommended_usage": "Use at screen edges or behind map elements to create depth.",
+      "alt_text": "Wide fluffy cloud group",
+      "tags": [
+        "cloud",
+        "sky",
+        "soft",
+        "decoration"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
     },
     {
+      "number": 6,
+      "id": "day_path_background",
+      "filename": "day_path_background.png",
+      "path": "assets/items/day_path_background.png",
+      "dimensions": "941x1672",
+      "category": "background",
+      "description": "Vertical sunny landscape with blue sky, clouds, flowers, green hills, and a winding path.",
+      "purpose": "Daytime adventure or lesson background.",
+      "recommended_usage": "Use behind map/lesson UI when a calm outdoor learning scene is needed.",
+      "alt_text": "Sunny path through green hills under a blue sky",
+      "tags": [
+        "background",
+        "day",
+        "path",
+        "sky",
+        "landscape"
+      ],
+      "alpha": true,
+      "background_removed": false,
+      "background_removal_note": "Full-screen scene background; kept opaque to preserve the artwork."
+    },
+    {
+      "number": 7,
+      "id": "floating_island_meadow",
+      "filename": "floating_island_meadow.png",
+      "path": "assets/items/floating_island_meadow.png",
+      "dimensions": "1448x1086",
+      "category": "world_piece",
+      "description": "Floating meadow island with trees, flowers, a small pond, and a curved dirt path.",
+      "purpose": "Number Meadow or general adventure map island module.",
+      "recommended_usage": "Place as a map region or decorative floating-world chunk.",
+      "alt_text": "Floating grassy island with trees, flowers, pond, and path",
+      "tags": [
+        "floating-island",
+        "meadow",
+        "map",
+        "world",
+        "nature"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 8,
+      "id": "floating_island_waterfall",
+      "filename": "floating_island_waterfall.png",
+      "path": "assets/items/floating_island_waterfall.png",
+      "dimensions": "1448x1086",
+      "category": "world_piece",
+      "description": "Floating island with waterfall, pond, trees, flowers, rocks, and trail path.",
+      "purpose": "Fraction Lagoon or magical map region module.",
+      "recommended_usage": "Use as a more dramatic island region near water-themed lessons.",
+      "alt_text": "Floating island with waterfall and path",
+      "tags": [
+        "floating-island",
+        "waterfall",
+        "lagoon",
+        "map",
+        "world"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 9,
+      "id": "fox_mascot_jumping",
+      "filename": "fox_mascot_jumping.png",
+      "path": "assets/items/fox_mascot_jumping.png",
+      "dimensions": "1086x1448",
+      "category": "mascot",
+      "description": "Happy fox mascot jumping with both arms raised in celebration.",
+      "purpose": "Celebration pose for correct answers, rewards, and success states.",
+      "recommended_usage": "Use on reward screens or after the learner answers correctly.",
+      "alt_text": "Happy fox mascot jumping in celebration",
+      "tags": [
+        "fox",
+        "mascot",
+        "celebration",
+        "reward",
+        "happy"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 10,
+      "id": "fox_mascot_pointing",
+      "filename": "fox_mascot_pointing.png",
+      "path": "assets/items/fox_mascot_pointing.png",
+      "dimensions": "1086x1448",
+      "category": "mascot",
+      "description": "Smiling fox mascot pointing upward with one finger, wearing the blue wizard-adventure outfit.",
+      "purpose": "Guide pose for hints, onboarding, or drawing attention to a UI element.",
+      "recommended_usage": "Use beside tutorial callouts or hint messages.",
+      "alt_text": "Smiling fox mascot pointing upward",
+      "tags": [
+        "fox",
+        "mascot",
+        "guide",
+        "pointing",
+        "hint"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 11,
+      "id": "fox_mascot_thinking",
+      "filename": "fox_mascot_thinking.png",
+      "path": "assets/items/fox_mascot_thinking.png",
+      "dimensions": "1086x1448",
+      "category": "mascot",
+      "description": "Fox mascot in a thoughtful pose with one paw at the chin and eyes looking upward.",
+      "purpose": "Thinking or problem-solving support state.",
+      "recommended_usage": "Use when presenting a hint, explanation, or reflective prompt.",
+      "alt_text": "Fox mascot thinking with paw on chin",
+      "tags": [
+        "fox",
+        "mascot",
+        "thinking",
+        "hint",
+        "support"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 12,
+      "id": "fox_mascot_worried",
+      "filename": "fox_mascot_worried.png",
+      "path": "assets/items/fox_mascot_worried.png",
+      "dimensions": "1086x1448",
+      "category": "mascot",
+      "description": "Fox mascot with a worried or concerned expression and hands held together.",
+      "purpose": "Gentle retry, low-confidence, or mistake recovery state.",
+      "recommended_usage": "Use after an incorrect answer with supportive copy.",
+      "alt_text": "Worried fox mascot standing with hands together",
+      "tags": [
+        "fox",
+        "mascot",
+        "worried",
+        "retry",
+        "support"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 13,
+      "id": "lesson_sky_background",
+      "filename": "lesson_sky_background.png",
+      "path": "assets/items/lesson_sky_background.png",
+      "dimensions": "941x1672",
+      "category": "background",
+      "description": "Vertical fantasy sky landscape with mountains, floating islands, clouds, and a winding path.",
+      "purpose": "Lesson or transition background with more magical depth than the simple day path.",
+      "recommended_usage": "Use behind lesson panels or map transitions.",
+      "alt_text": "Fantasy sky landscape with mountains and floating islands",
+      "tags": [
+        "background",
+        "lesson",
+        "sky",
+        "mountains",
+        "fantasy"
+      ],
+      "alpha": true,
+      "background_removed": false,
+      "background_removal_note": "Full-screen scene background; kept opaque to preserve the artwork."
+    },
+    {
+      "number": 14,
+      "id": "magic_portal_blue",
+      "filename": "magic_portal_blue.png",
+      "path": "assets/items/magic_portal_blue.png",
+      "dimensions": "1254x1254",
+      "category": "effect",
+      "description": "Round blue magical portal with gold ring, glowing cyan center, and gem accents.",
+      "purpose": "Transition effect, unlock portal, or special lesson entry marker.",
+      "recommended_usage": "Use when entering a lesson, opening a new world, or showing magical travel.",
+      "alt_text": "Blue magic portal with gold ring",
+      "tags": [
+        "portal",
+        "magic",
+        "transition",
+        "blue",
+        "effect"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 15,
+      "id": "map_node_blank_blue",
+      "filename": "map_node_blank_blue.png",
+      "path": "assets/items/map_node_blank_blue.png",
+      "dimensions": "1254x1254",
+      "category": "map_node",
+      "description": "Blank glossy blue circular map node with a pale star shape in the center.",
+      "purpose": "Available or empty map node state.",
+      "recommended_usage": "Use for future nodes before a number label or stars are applied.",
+      "alt_text": "Blank blue circular map node",
+      "tags": [
+        "node",
+        "map",
+        "blue",
+        "available",
+        "blank"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 16,
+      "id": "map_node_completed_3stars",
+      "filename": "map_node_completed_3stars.png",
+      "path": "assets/items/map_node_completed_3stars.png",
+      "dimensions": "1254x1254",
+      "category": "map_node",
+      "description": "Green-blue gem-like completed map node with a central gold star and three smaller stars underneath.",
+      "purpose": "Completed or mastered map node state.",
+      "recommended_usage": "Use for completed lessons or mastered path nodes.",
+      "alt_text": "Completed map node with three stars",
+      "tags": [
+        "node",
+        "map",
+        "completed",
+        "stars",
+        "mastery"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 17,
+      "id": "map_node_locked",
+      "filename": "map_node_locked.png",
+      "path": "assets/items/map_node_locked.png",
+      "dimensions": "1254x1254",
+      "category": "map_node",
+      "description": "Blue stone circular locked node with silver padlock and gem accents.",
+      "purpose": "Locked map node state.",
+      "recommended_usage": "Use for unavailable future levels.",
+      "alt_text": "Locked blue circular map node with padlock",
+      "tags": [
+        "node",
+        "map",
+        "locked",
+        "padlock"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 18,
+      "id": "nav_icon_practice",
+      "filename": "nav_icon_practice.png",
+      "path": "assets/items/nav_icon_practice.png",
+      "dimensions": "1254x1254",
+      "category": "navigation_icon",
+      "description": "Round gold-framed icon showing an open math notebook with a pencil and plus/multiply symbols.",
+      "purpose": "Practice tab icon.",
+      "recommended_usage": "Use in the bottom navigation for practice mode.",
+      "alt_text": "Practice icon with notebook and pencil",
+      "tags": [
+        "navigation",
+        "practice",
+        "notebook",
+        "pencil",
+        "icon"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 19,
+      "id": "nav_icon_quests",
+      "filename": "nav_icon_quests.png",
+      "path": "assets/items/nav_icon_quests.png",
+      "dimensions": "1254x1254",
+      "category": "navigation_icon",
+      "description": "Blue quest book with gold star and small parchment map.",
+      "purpose": "Quests tab icon.",
+      "recommended_usage": "Use in the bottom navigation for quests or missions.",
+      "alt_text": "Quest book icon with star and parchment",
+      "tags": [
+        "navigation",
+        "quests",
+        "book",
+        "star",
+        "icon"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 20,
+      "id": "nav_icon_shop",
+      "filename": "nav_icon_shop.png",
+      "path": "assets/items/nav_icon_shop.png",
+      "dimensions": "1254x1254",
+      "category": "navigation_icon",
+      "description": "Round shop icon with a blue storefront, striped awning, and star badge.",
+      "purpose": "Shop tab icon.",
+      "recommended_usage": "Use in the bottom navigation for the shop screen.",
+      "alt_text": "Shop storefront icon with blue awning and star",
+      "tags": [
+        "navigation",
+        "shop",
+        "storefront",
+        "icon"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 21,
+      "id": "reward_night_background",
+      "filename": "reward_night_background.png",
+      "path": "assets/items/reward_night_background.png",
+      "dimensions": "941x1672",
+      "category": "background",
+      "description": "Vertical magical night-sky scene with stars, purple-blue sky, glowing path, and distant fantasy scenery.",
+      "purpose": "Reward/completion screen background.",
+      "recommended_usage": "Use behind reward stars, XP, and celebration UI.",
+      "alt_text": "Magical starry night reward background",
+      "tags": [
+        "background",
+        "reward",
+        "night",
+        "stars",
+        "magic"
+      ],
+      "alpha": true,
+      "background_removed": false,
+      "background_removal_note": "Full-screen scene background; kept opaque to preserve the artwork."
+    },
+    {
+      "number": 22,
+      "id": "ribbon_banner_gold",
+      "filename": "ribbon_banner_gold.png",
+      "path": "assets/items/ribbon_banner_gold.png",
+      "dimensions": "1448x1086",
+      "category": "banner",
+      "description": "Glossy gold ribbon banner with a central gem and curled ribbon ends.",
+      "purpose": "Title banner or reward label component.",
+      "recommended_usage": "Use for positive titles, reward headings, or section headers.",
+      "alt_text": "Gold ribbon banner",
+      "tags": [
+        "banner",
+        "gold",
+        "title",
+        "reward",
+        "ui"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 23,
+      "id": "sparkle_particle",
+      "filename": "sparkle_particle.png",
+      "path": "assets/items/sparkle_particle.png",
+      "dimensions": "1254x1254",
+      "category": "effect",
+      "description": "Colorful sparkle burst with golden center, cyan/purple swirls, small stars, and particles.",
+      "purpose": "Celebration particle effect.",
+      "recommended_usage": "Use when awarding stars, XP, or correct-answer feedback.",
+      "alt_text": "Colorful sparkle particle burst",
+      "tags": [
+        "sparkle",
+        "particle",
+        "celebration",
+        "effect",
+        "stars"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 24,
+      "id": "star_filled_gold",
+      "filename": "star_filled_gold.png",
+      "path": "assets/items/star_filled_gold.png",
+      "dimensions": "1254x1254",
+      "category": "reward_icon",
+      "description": "Large glossy filled gold star with highlights and bright dimensional shading.",
+      "purpose": "Earned star, reward, or completed-star state.",
+      "recommended_usage": "Use for earned stars on reward screens and completed map nodes.",
+      "alt_text": "Filled gold reward star",
+      "tags": [
+        "star",
+        "filled",
+        "gold",
+        "reward",
+        "earned"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 25,
+      "id": "star_outline_empty",
+      "filename": "star_outline_empty.png",
+      "path": "assets/items/star_outline_empty.png",
+      "dimensions": "1254x1254",
+      "category": "reward_icon",
+      "description": "Gold-outlined empty star with pale cream interior.",
+      "purpose": "Unearned star or empty reward state.",
+      "recommended_usage": "Use for star slots that have not been earned yet.",
+      "alt_text": "Empty gold outlined star",
+      "tags": [
+        "star",
+        "outline",
+        "empty",
+        "reward",
+        "unearned"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
+    },
+    {
+      "number": 26,
       "id": "xp_badge_60",
-      "path": "assets/screen_crops/xp_badge_60.png",
-      "source": "assets/screens/03_reward_completion_screen.png",
-      "purpose": "XP reward badge reference."
+      "filename": "xp_badge_60.png",
+      "path": "assets/items/xp_badge_60.png",
+      "dimensions": "1254x1254",
+      "category": "reward_badge",
+      "description": "Glossy blue-and-gold badge with a gold star and text '+60 XP'.",
+      "purpose": "Reward badge for 60 XP completion payout.",
+      "recommended_usage": "Use on reward screen after the learner completes node 26.",
+      "alt_text": "Plus sixty XP badge with gold star",
+      "tags": [
+        "xp",
+        "badge",
+        "reward",
+        "star",
+        "60"
+      ],
+      "alpha": true,
+      "background_removed": true,
+      "background_removal_note": "Blank outer background removed; subject preserved with soft alpha edge."
     }
-  ]
+  ],
+  "counts": {
+    "screens": 5,
+    "references": 4,
+    "items": 26
+  },
+  "processing": {
+    "background_removal": {
+      "date": "2026-06-16",
+      "method": "local edge-connected background flood fill with soft alpha; full-screen background assets kept opaque",
+      "original_backup": "archive/items_original_before_bg_removal_2026-06-16/",
+      "output_location": "assets/items/",
+      "notes": "Most item images now have transparent PNG backgrounds. Background scene images keep opaque alpha because the scene itself is the background."
+    }
+  }
 }

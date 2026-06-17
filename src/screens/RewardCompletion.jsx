@@ -29,7 +29,7 @@ const styles = {
   },
   bannerWrap: {
     position: 'absolute',
-    top: 130,
+    top: 110,
     left: 0,
     right: 0,
     display: 'flex',
@@ -38,46 +38,46 @@ const styles = {
   },
   starsRow: {
     position: 'absolute',
-    top: 320,
+    top: 270,
     left: 0,
     right: 0,
     display: 'flex',
     justifyContent: 'center',
-    gap: 14,
+    gap: 16,
     zIndex: 5,
   },
   message: {
     position: 'absolute',
-    top: 405,
+    top: 390,
     left: 0,
     right: 0,
     textAlign: 'center',
     color: 'var(--c-white)',
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: 900,
     textShadow: '0 2px 0 rgba(20, 30, 70, 0.5)',
     zIndex: 5,
   },
   xpWrap: {
     position: 'absolute',
-    top: 445,
+    top: 440,
     left: 0,
     right: 0,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: 6,
+    gap: 8,
     zIndex: 5,
   },
   xpText: {
     color: 'var(--c-star-gold)',
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 900,
     textShadow: '0 2px 0 rgba(20, 30, 70, 0.5)',
   },
   mascotWrap: {
     position: 'absolute',
-    top: 470,
+    top: 570,
     left: 0,
     right: 0,
     display: 'flex',
@@ -86,7 +86,7 @@ const styles = {
   },
   ctaWrap: {
     position: 'absolute',
-    bottom: 120,
+    bottom: 90,
     left: 24,
     right: 24,
     display: 'flex',
@@ -160,9 +160,9 @@ export default function RewardCompletion({ state, dispatch, onNavigate }) {
           <div
             key={`s-${i}-${playKey}`}
             ref={(el) => (starRefs.current[i] = el)}
-            style={{ width: 78, height: 78 }}
+            style={{ width: 88, height: 88 }}
           >
-            <StarIcon filled={i < earnedStars} size={78} />
+            <StarIcon filled={i < earnedStars} size={88} />
           </div>
         ))}
       </div>
@@ -170,7 +170,7 @@ export default function RewardCompletion({ state, dispatch, onNavigate }) {
       <p style={styles.message}>{mvpConfig.reward.message}</p>
 
       <div style={styles.xpWrap}>
-        <XpBadge value={state.reward.earnedXp} />
+        <XpBadge value={state.reward.earnedXp} style={{ width: 150, height: 150 }} />
         <span ref={xpRef} style={styles.xpText}>
           +0 XP
         </span>

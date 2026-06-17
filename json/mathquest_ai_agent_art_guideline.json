@@ -108,5 +108,56 @@
     "mascot": "Create a cute orange fox mascot for a children's math adventure app, blue wizard/adventure costume with yellow star, expressive and encouraging, polished mobile game art, no text, no watermark.",
     "map": "Create a colorful floating-island adventure map for a math learning game, glowing trail nodes, rainbow sky, castle, bridge, flowers, clouds, polished mobile game UI, no watermark.",
     "reward": "Create a celebratory reward screen for a children's math game, Bridge Repaired feeling, three glowing stars, +60 XP badge, happy fox mascot, magical night sky, polished mobile UI, no watermark."
+  },
+  "component_asset_source": {
+    "canonical_folder": "assets/items/",
+    "manifest": "json/mathquest_asset_manifest.json",
+    "count": 26,
+    "format": "PNG with alpha channel",
+    "transparency_policy": "Reusable item assets should use transparent backgrounds. Full-screen scene backgrounds keep opaque alpha because the artwork itself is the background.",
+    "original_backup": "archive/items_original_before_bg_removal_2026-06-16/",
+    "usage_rule": "Prefer assets/items for composable UI, mascot, node, reward, navigation, effect, and world-piece elements. Use assets/screens only as full-screen references."
+  },
+  "item_categories": {
+    "mascot": [
+      "fox_mascot_jumping",
+      "fox_mascot_pointing",
+      "fox_mascot_thinking",
+      "fox_mascot_worried"
+    ],
+    "map_nodes": [
+      "map_node_blank_blue",
+      "map_node_completed_3stars",
+      "map_node_locked"
+    ],
+    "navigation": [
+      "bottom_nav_strip",
+      "nav_icon_quests",
+      "nav_icon_practice",
+      "nav_icon_shop"
+    ],
+    "rewards": [
+      "star_filled_gold",
+      "star_outline_empty",
+      "ribbon_banner_gold",
+      "xp_badge_60",
+      "sparkle_particle"
+    ],
+    "world_pieces": [
+      "floating_island_meadow",
+      "floating_island_waterfall",
+      "bridge_path_segment",
+      "cloud_puff_large",
+      "cloud_puff_soft"
+    ],
+    "backgrounds": [
+      "day_path_background",
+      "lesson_sky_background",
+      "reward_night_background"
+    ],
+    "lesson_ui": [
+      "answer_card_orange",
+      "magic_portal_blue"
+    ]
   }
 }

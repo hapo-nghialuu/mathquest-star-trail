@@ -14,7 +14,15 @@ export default function App() {
   const [state, dispatch] = React.useReducer(
     reducer,
     null,
-    () => loadState() || buildInitialState()
+    () => {
+      const loaded = loadState() || buildInitialState();
+      // Debug-only: ?screen=lesson|reward|map forces a screen for screenshots.
+      const urlScreen = new URLSearchParams(window.location.search).get('screen');
+      if (urlScreen === 'lesson' || urlScreen === 'reward' || urlScreen === 'map') {
+        return { ...loaded, screen: urlScreen === 'map' ? 'adventure_map' : urlScreen };
+      }
+      return loaded;
+    }
   );
 
   // Persist HUD + node state on every change.
